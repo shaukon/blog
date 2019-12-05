@@ -15,7 +15,10 @@ class AdminLogin
      */
     public function handle($request, Closure $next)
     {
-        echo "hello amin.login";
+        if(!session('user')){
+            return redirect('admin/login');
+        }
+
         return $next($request);
     }
 }

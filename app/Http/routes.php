@@ -19,6 +19,23 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::any('admin/login', 'Admin\LoginController@login');
     Route::get('admin/code', 'Admin\LoginController@code');
+//    Route::get('admin/en', 'Admin\LoginController@encrypt');
+});
 
 
+Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace'=>'Admin'], function () {
+    Route::get('index', 'IndexController@index');
+    Route::get('info', 'IndexController@info');
+    Route::get('quit', 'LoginController@quit');
+    Route::any('pass', 'IndexController@pass');
+
+    Route::resource('category', 'CategoryController');
+    Route::resource('cate/changeorder', 'CategoryController@changeOrder');
+
+    Route::resource('links', 'LinksController');
+    Route::resource('links/changeorder', 'LinksController@changeOrder');
+
+    Route::resource('article', 'ArticleController');
+
+    Route::any('upload', 'CommonController@upload');
 });
