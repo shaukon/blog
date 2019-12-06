@@ -35,6 +35,9 @@ Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace
     Route::resource('links', 'LinksController');
     Route::resource('links/changeorder', 'LinksController@changeOrder');
 
+    Route::resource('navs', 'NavsController');
+    Route::resource('navs/changeorder', 'NavsController@changeOrder');
+
     Route::resource('article', 'ArticleController');
 
     Route::any('upload', 'CommonController@upload');
