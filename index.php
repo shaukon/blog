@@ -6,6 +6,7 @@
  * @package  Laravel
  * @author   Taylor Otwell <taylorotwell@gmail.com>
  */
+
 session_start();
 
 $uri = urldecode(
