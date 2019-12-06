@@ -30,15 +30,22 @@ Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace
     Route::any('pass', 'IndexController@pass');
 
     Route::resource('category', 'CategoryController');
-    Route::resource('cate/changeorder', 'CategoryController@changeOrder');
+    Route::post('cate/changeorder', 'CategoryController@changeOrder');
 
     Route::resource('links', 'LinksController');
-    Route::resource('links/changeorder', 'LinksController@changeOrder');
+    Route::post('links/changeorder', 'LinksController@changeOrder');
 
     Route::resource('navs', 'NavsController');
-    Route::resource('navs/changeorder', 'NavsController@changeOrder');
+    Route::post('navs/changeorder', 'NavsController@changeOrder');
 
     Route::resource('article', 'ArticleController');
+
+
+    Route::post('conf/changeorder', 'ConfigController@changeOrder');
+    Route::post('conf/changecontent', 'ConfigController@changeContent');
+    Route::get('conf/putfile', 'ConfigController@putFile');
+    Route::resource('conf', 'ConfigController');
+
 
     Route::any('upload', 'CommonController@upload');
 });

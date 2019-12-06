@@ -4,7 +4,7 @@
     <!--面包屑导航 开始-->
     <div class="crumb_warp">
         <!--<i class="fa fa-bell"></i> 欢迎使用登陆网站后台，建站的首选工具。-->
-        <i class="fa fa-home"></i> <a href="{{url('admin/info')}}">首页</a>  &raquo; 添加导航
+        <i class="fa fa-home"></i> <a href="{{url('admin/info')}}">首页</a>  &raquo; 导航管理
     </div>
     <!--面包屑导航 结束-->
 
@@ -26,7 +26,7 @@
         </div>
         <div class="result_content">
             <div class="short_wrap">
-                <a href="{{url('admin/navs/create')}}"><i class="fa fa-plus"></i>新增导航</a>
+                <a href="{{url('admin/navs/create')}}"><i class="fa fa-plus"></i>添加导航</a>
                 <a href="{{url('admin/navs')}}"><i class="fa fa-recycle"></i>导航列表</a>
             </div>
 

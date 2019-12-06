@@ -3,7 +3,7 @@
     <!--面包屑导航 开始-->
     <div class="crumb_warp">
         <!--<i class="fa fa-bell"></i> 欢迎使用登陆网站后台，建站的首选工具。-->
-        <i class="fa fa-home"></i> <a href="{{url('admin/index')}}">首页</a> &raquo; 友情链接列表
+        <i class="fa fa-home"></i> <a href="{{url('admin/index')}}">首页</a> &raquo; 链接管理
     </div>
     <!--面包屑导航 结束-->
 
@@ -11,12 +11,12 @@
     <form action="#" method="post">
         <div class="result_wrap">
             <div class="result_title">
-                <h3>链接管理</h3>
+                <h3>链接列表</h3>
             </div>
             <!--快捷导航 开始-->
             <div class="result_content">
                 <div class="short_wrap">
-                    <a href="{{url('admin/links/create')}}"><i class="fa fa-plus"></i>新增链接</a>
+                    <a href="{{url('admin/links/create')}}"><i class="fa fa-plus"></i>添加链接</a>
                     <a href="{{url('admin/links')}}"><i class="fa fa-recycle"></i>链接列表</a>
                 </div>
             </div>
