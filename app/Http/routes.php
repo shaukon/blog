@@ -14,18 +14,19 @@
 Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', 'Home\IndexController@index');
-    Route::get('/lists', 'Home\IndexController@lists');
-    Route::get('/news', 'Home\IndexController@news');
+    Route::get('/cate/{Id}', 'Home\IndexController@cate');
+    Route::get('/a/{Id}', 'Home\IndexController@article');
 
 
     Route::any('admin/login', 'Admin\LoginController@login');
     Route::get('admin/code', 'Admin\LoginController@code');
-//    Route::get('admin/en', 'Admin\LoginController@encrypt');
+
+    Route::get('admin/en', 'Admin\LoginController@encrypt');
 });
 
 
 Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace'=>'Admin'], function () {
-    Route::get('index', 'IndexController@index');
+    Route::get('/', 'IndexController@index');
     Route::get('info', 'IndexController@info');
     Route::get('quit', 'LoginController@quit');
     Route::any('pass', 'IndexController@pass');
