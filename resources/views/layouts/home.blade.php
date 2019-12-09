@@ -17,16 +17,32 @@
 <header>
     <div id="logo"><a href="{{url('/')}}"></a></div>
     <nav class="topnav" id="topnav">
-        @foreach($navs as $k => $v)
-        <a href="{{$v->nav_url}}"><span>{{$v->nav_name}}</span><span class="en">{{$v->nav_alias}}</span></a>
-       @endforeach
+        @foreach($navs as $k => $v)<a href="{{$v->nav_src}}"><span>{{$v->nav_name}}</span><span class="en">{{$v->nav_alias}}</span></a>@endforeach
         </nav>
 </header>
 
-@yield('content')
+@section('content')
+    <h3>
+        <p>最新<span>文章</span></p>
+    </h3>
+    <ul class="rank">
+        @foreach($new as $n)
+            <li><a href="{{url('a/'.$n->Id)}}" title="{{$n->art_title}}" target="_blank">{{$n->art_title}}</a></li>
+        @endforeach
+    </ul>
+
+    <h3 class="ph">
+        <p>点击<span>排行</span></p>
+    </h3>
+    <ul class="paih">
+        @foreach($hot as $h)
+            <li><a href="{{url('a/'.$h->Id)}}" title="{{$h->art_title}}" target="_blank">{{$h->art_title}}</a></li>
+        @endforeach
+    </ul>
+@show
 
 <footer>
-    <p>Design by 谢小康 <a href="http://www.miitbeian.gov.cn/" target="_blank">http://www.xiexiaokang.com</a> <a href="/">网站统计</a></p>
+    <p>{!! Config::get('web.copyright') !!} {{Config::get('web.web_count')}}</p>
 </footer>
 <script src="{{asset('resources/views/home/js/silder.js')}}"></script>
 </body>

@@ -34,7 +34,7 @@
 					</li>
 				</ul>
 			</form>
-			<p><a href="#">返回首页</a> &copy; 2016 Powered by <a href="http://www.xiexiaokang.com" target="_blank">http://www.xiexiaokang.com</a></p>
+			<p><a href="#">返回首页</a> &copy; 2019 Powered by <a href="http://www.xiexiaokang.com" target="_blank">http://www.xiexiaokang.com</a></p>
 		</div>
 	</div>
 </body>

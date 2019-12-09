@@ -1,4 +1,6 @@
 @extends('layouts.admin')
+
+
 @section('content')
 		<!--头部 开始-->
 <div class="top_box">
@@ -51,7 +53,7 @@
 
 <!--底部 开始-->
 <div class="bottom_box">
-	CopyRight © 2015. Powered By <a href="http://www.xiexiaokang.com">http://www.xiexiaokang.com</a>.
+	CopyRight © 2019. Powered By <a href="http://www.xiexiaokang.com">http://www.xiexiaokang.com</a>.
 </div>
 <!--底部 结束-->
 
